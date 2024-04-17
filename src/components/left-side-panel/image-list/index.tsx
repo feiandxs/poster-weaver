@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { ImageItem } from './image-item';
 
 export interface ImageListProps {
