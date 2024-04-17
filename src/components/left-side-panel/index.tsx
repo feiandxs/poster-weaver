@@ -9,6 +9,7 @@ import { Basic } from 'unsplash-js/dist/methods/photos/types';
 // components
 import { LeftSidePanelHeader } from './header';
 import { ImageList } from './image-list';
+import { LeftSideBottom } from './bottom';
 
 const LeftSidePanel = () => {
   const [images, setImages] = useState<Basic[]>([]);
@@ -25,12 +26,15 @@ const LeftSidePanel = () => {
   };
 
   return (
-    <div className='h-full flex flex-col justify-start items-cente w-72'>
+    <div className='h-screen flex flex-col justify-start items-center w-72'>
       <LeftSidePanelHeader />
-      <ImageList
-        images={images}
-        onImageSelect={onImageSelect}
-      />
+      <div className='flex-1 overflow-y-auto w-full flex justify-center'>
+        <ImageList
+          images={images}
+          onImageSelect={onImageSelect}
+        />
+      </div>
+      <LeftSideBottom />
     </div>
   );
 };
