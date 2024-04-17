@@ -1,3 +1,6 @@
+import { useState } from 'react';
+
+// components
 import { LeftSidePanel } from '@/components/left-side-panel';
 import { MainComponent } from '@/components/main';
 import { RightPropertyPanel } from '@/components/right-property-panel';
