@@ -1,8 +1,9 @@
 import { unsplash } from '@/utils/unsplash';
 
-const getUnsplashImages = async (query: string) => {
-  'use server';
+// types
+import { Basic } from 'unsplash-js/dist/methods/photos/types';
 
+const getUnsplashImages = async (query: string): Promise<Basic[]> => {
   const response = await unsplash.search.getPhotos({
     query: query === '' ? 'poster' : query,
     page: 1,
