@@ -26,7 +26,7 @@ const LeftSidePanel = () => {
   };
 
   return (
-    <div className='h-screen flex flex-col justify-start items-center w-80'>
+    <div className='h-screen flex flex-col justify-start items-center w-80 bg-white'>
       <LeftSidePanelHeader />
       <div className='flex-1 overflow-y-auto w-full flex justify-center'>
         <ImageList
