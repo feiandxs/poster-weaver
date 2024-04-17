@@ -1,13 +1,19 @@
+import Link from 'next/link';
 import Image from 'next/image';
 
 const Logo = () => (
-  <div className='logo'>
-    <Image
-      src='/logo/logo.png'
-      alt='logo'
-      width={371}
-      height={62}
-    />
+  <div className='pr-16 cursor-pointer'>
+    <Link
+      href='/'
+    >
+      <Image
+        src='/logo/logo.png'
+        alt='logo'
+        width={371}
+        height={62}
+      />
+    </Link>
+
   </div>
 );
 
