@@ -9,7 +9,7 @@ export interface ImageListProps {
 const ImageList = (props: ImageListProps) => {
   const { images, onImageSelect } = props;
   return (
-    <div className='grid grid-cols-2 gap-4'>
+    <div className='grid grid-cols-2 gap-4 gap-y-4 pt-4'>
       {images.map((image) => (
         <ImageItem
           key={image.id}
