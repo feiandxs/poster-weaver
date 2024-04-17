@@ -1,9 +1,19 @@
 import { siteInfo } from '@/constants/site-info';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+import {
+  inter,
+  spaceGroteskFont,
+  lexend,
+  dingTalkFont,
+  kingsoftFont,
+  xinYiGuanHeiFont,
+  alibabaFont,
+  openSans,
+  robotoMono,
+  ankeLatin,
+} from '@/utils/font';
 
 export const metadata: Metadata = {
   title: siteInfo.title,
@@ -17,7 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.variable}${spaceGroteskFont.variable}${lexend.variable}${dingTalkFont.variable}${kingsoftFont.variable}${xinYiGuanHeiFont.variable}${alibabaFont.variable}${openSans.variable}${robotoMono.variable}${ankeLatin.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
