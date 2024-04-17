@@ -15,7 +15,7 @@ const LeftSidePanel = () => {
   const [images, setImages] = useState<Basic[]>([]);
 
   useEffect(() => {
-    getUnsplashImages('poster').then((data) => {
+    getUnsplashImages('scenery').then((data) => {
       console.log(data);
       setImages(data);
     });
